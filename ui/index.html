@@ -1,0 +1,55 @@
+<html>
+  <head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/gh/hung1001/font-awesome-pro@4cac1a6/css/all.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css2?family=Gantari:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:wght@500&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div id="quick-coords" class="hidden flex flex-row items-center absolute mt-5 left-[50%] translate-x-[-50%] text-white font-bold drop-shadow-[1px_1px_0_black]">
+      <div class="mr-5 text-red-500" id="qcoords-x">X:</div>
+      <div class="mr-5 text-red-500" id="qcoords-y">Y:</div>
+      <div class="mr-5 text-red-500" id="qcoords-z">Z:</div>
+      <div class="mr-5 text-red-500" id="qcoords-h">H:</div>
+    </div>
+
+    <div id="copy-coords" class="hidden flex flex-col items-center absolute mt-5 left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%] text-white font-bold bg-[rgba(0,0,0,.7)] text-[1.5vh] p-[1vh] rounded-lg">
+      <div class="text-[3vh] mb-5">Coords</div>
+      <div id="coords-container" class="flex flex-col items-center text-[1.5vh] font-normal w-[40vh]">
+        <div class="flex flex-row items-center"><div class="p-[1vh] bg-black rounded h-[4.5vh]">vector3(0,0,0)</div><button class="button ml-2"><i class="fad fa-copy"></i></button></div>
+      </div>
+      <button id="close" class="button mt-5"><i class="fas fa-times"></i> Cerrar</button>
+    </div>
+    <script src="app.js" type="text/javascript"></script>
+  </body>
+</html>
+
+<style>
+  body{
+    font-family: Quicksand;
+  }
+
+  .button{
+    transition: 200ms;
+    background-color: white;
+    color: black;
+    padding: 1vh;
+    border-radius: 5px;
+    font-size: 1.5vh;
+    height: 4.5vh;
+    cursor:pointer
+  }
+
+  .button:hover{
+    background-color: rgb(100, 98, 98);
+  }
+
+  .button:active{
+    background-color: rgb(0, 0, 0);
+    color:white
+  }
+
+  .button:focus{
+    border: 0;
+    outline: 0;
+  }
+</style>
